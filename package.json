@@ -1,6 +1,6 @@
 {
   "name": "lint-to-the-future-stylelint",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "repository": "https://github.com/mansona/lint-to-the-future-ember-template",
   "scripts": {
     "lint": "eslint .",
