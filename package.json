@@ -1,0 +1,27 @@
+{
+  "name": "lint-to-the-future-stylelint",
+  "version": "0.0.0",
+  "repository": "https://github.com/mansona/lint-to-the-future-ember-template",
+  "scripts": {
+    "lint": "eslint .",
+    "release": "release-it"
+  },
+  "dependencies": {
+    "esm": "^3.2.25",
+    "import-cwd": "^3.0.0",
+    "walk-sync": "^2.2.0"
+  },
+  "devDependencies": {
+    "auto-changelog": "https://git@github.com/mansona/auto-changelog.git#epic",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.8.0",
+    "release-it": "^14.4.1"
+  },
+  "peerDependencies": {
+    "stylelint": "^13.0.0"
+  },
+  "engines": {
+    "node": "12.* || >= 14.*"
+  }
+}
