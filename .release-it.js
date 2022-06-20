@@ -8,6 +8,7 @@ module.exports = {
   },
   github: {
     release: true,
+    web: true,
     releaseNotes: "cat CHANGELOG.md | sed -e '/^$/,$d'"
   }
 };
