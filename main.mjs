@@ -14,6 +14,8 @@ const fileGlobs = [
   'vendor/**/*.scss',
 ];
 
+const stylelintRegex = /stylelint-disable (.*) \*\//;
+
 function ignoreError(errors, filePath) {
   const ruleIds = errors
     .filter(error => error.severity === 'error')
@@ -30,8 +32,8 @@ function ignoreError(errors, filePath) {
 
   const firstLine = file.split('\n')[0];
 
-  if (firstLine.includes('stylelint-disable')) {
-    const matched = firstLine.match(/stylelint-disable (.*) \*\//);
+  if (firstLine.match(stylelintRegex)) {
+    const matched = firstLine.match(stylelintRegex);
     const existing = matched[1].split(',')
       .map(item => item.trim())
       .filter(item => item.length);
@@ -80,11 +82,12 @@ export function list(directory) {
   files.forEach((filePath) => {
     const file = readFileSync(join(cwd, filePath), 'utf8');
     const firstLine = file.split('\n')[0];
-    if (!firstLine.includes('stylelint-disable')) {
+
+    if (!firstLine.match(stylelintRegex)) {
       return;
     }
 
-    const matched = firstLine.match(/stylelint-disable (.*) \*\//);
+    const matched = firstLine.match(stylelintRegex);
 
     const ignoreRules = matched[1].split(',')
       .map(item => item.trim())
