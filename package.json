@@ -1,6 +1,6 @@
 {
   "name": "lint-to-the-future-stylelint",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "repository": "https://github.com/mansona/lint-to-the-future-stylelint",
   "scripts": {
     "lint": "eslint .",
