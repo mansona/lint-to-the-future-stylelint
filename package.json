@@ -4,7 +4,8 @@
   "repository": "https://github.com/mansona/lint-to-the-future-stylelint",
   "scripts": {
     "lint": "eslint .",
-    "release": "release-it"
+    "release": "release-it",
+    "test": "mocha --recursive --reporter spec test/**/*.mjs"
   },
   "dependencies": {
     "esm": "^3.2.25",
@@ -13,10 +14,16 @@
   },
   "devDependencies": {
     "auto-changelog": "https://git@github.com/mansona/auto-changelog.git#epic",
+    "chai": "^4.3.6",
     "eslint": "^5.9.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.8.0",
-    "release-it": "^14.4.1"
+    "fixturify": "^2.1.1",
+    "mocha": "^10.0.0",
+    "release-it": "^14.4.1",
+    "stylelint": "^14.0.0",
+    "stylelint-config-standard-scss": "^5.0.0",
+    "tmp": "^0.2.1"
   },
   "peerDependencies": {
     "stylelint": "^13.0.0 || ^14.0.0"
