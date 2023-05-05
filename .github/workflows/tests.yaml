@@ -6,20 +6,41 @@ on:
   pull_request:
 
 jobs:
-  test:
+  lint:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        node-version: [14.x, 16.x, 18.x]
 
     steps:
     - uses: actions/checkout@v2
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 16
+        cache: npm
+    - run: npm ci
+    - run: npm run lint
+
+  test:
+    name: "test with stylelint ${{ matrix.stylelint-version}} on node v${{ matrix.node-version }}"
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        stylelint-version:
+          - 13
+          - 14
+          - 15
+        node-version:
+          - 14
+          - 16
+          - 18
+
+    steps:
+    - uses: actions/checkout@v3
     - uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
         cache: npm
     - run: npm i -g npm@8
     - run: npm ci
-    - run: npm run lint
+    - run: npm i stylelint@${{ matrix.stylelint-version }}
     - run: npm test
