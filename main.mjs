@@ -54,6 +54,9 @@ export async function ignoreAll(directory) {
   const stylelint = importCwd('stylelint');
 
   const result = await stylelint.lint({
+    globbyOptions: {
+      cwd,
+    },
     files: fileGlobs,
     cwd,
   });
