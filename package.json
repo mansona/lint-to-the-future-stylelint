@@ -6,18 +6,19 @@
     "lint": "eslint .",
     "test": "vitest"
   },
+  "main": "main.mjs",
+  "type": "module",
   "dependencies": {
-    "esm": "^3.2.25",
     "import-cwd": "^3.0.0",
     "walk-sync": "^2.2.0"
   },
   "devDependencies": {
-    "eslint": "^5.9.0",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.8.0",
+    "@eslint/js": "^9.22.0",
+    "eslint": "^9.22.0",
     "execa": "^9.5.2",
     "fixturify": "^2.1.1",
     "fixturify-project": "^7.1.3",
+    "globals": "^16.0.0",
     "lint-to-the-future": "^2.6.3",
     "release-plan": "^0.13.1",
     "stylelint": "^14.0.0",
