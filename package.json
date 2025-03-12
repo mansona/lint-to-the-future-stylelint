@@ -13,7 +13,6 @@
     "walk-sync": "^2.2.0"
   },
   "devDependencies": {
-    "auto-changelog": "https://git@github.com/mansona/auto-changelog.git#epic",
     "chai": "^4.3.6",
     "eslint": "^5.9.0",
     "eslint-config-airbnb-base": "^13.1.0",
@@ -30,5 +29,6 @@
   },
   "engines": {
     "node": "12.* || >= 14.*"
-  }
+  },
+  "packageManager": "pnpm@10.6.1+sha512.40ee09af407fa9fbb5fbfb8e1cb40fbb74c0af0c3e10e9224d7b53c7658528615b2c92450e74cfad91e3a2dcafe3ce4050d80bda71d757756d2ce2b66213e9a3"
 }
