@@ -1,0 +1,29 @@
+{
+  "solution": {
+    "lint-to-the-future-stylelint": {
+      "impact": "major",
+      "oldVersion": "1.1.0",
+      "newVersion": "2.0.0",
+      "constraints": [
+        {
+          "impact": "major",
+          "reason": "Appears in changelog section :boom: Breaking Change"
+        },
+        {
+          "impact": "minor",
+          "reason": "Appears in changelog section :rocket: Enhancement"
+        },
+        {
+          "impact": "patch",
+          "reason": "Appears in changelog section :bug: Bug Fix"
+        },
+        {
+          "impact": "patch",
+          "reason": "Appears in changelog section :house: Internal"
+        }
+      ],
+      "pkgJSONPath": "./package.json"
+    }
+  },
+  "description": "## Release (2025-03-12)\n\nlint-to-the-future-stylelint 2.0.0 (major)\n\n#### :boom: Breaking Change\n* `lint-to-the-future-stylelint`\n  * [#16](https://github.com/mansona/lint-to-the-future-stylelint/pull/16) swap to esm only and drop esm dependency ([@mansona](https://github.com/mansona))\n  * [#10](https://github.com/mansona/lint-to-the-future-stylelint/pull/10) drop support for node 14 and 16 ([@mansona](https://github.com/mansona))\n\n#### :rocket: Enhancement\n* `lint-to-the-future-stylelint`\n  * [#9](https://github.com/mansona/lint-to-the-future-stylelint/pull/9) Improve ignore handling ([@wagenet](https://github.com/wagenet))\n\n#### :bug: Bug Fix\n* `lint-to-the-future-stylelint`\n  * [#8](https://github.com/mansona/lint-to-the-future-stylelint/pull/8) Widen peer range on stylelint. ([@NullVoxPopuli](https://github.com/NullVoxPopuli))\n\n#### :house: Internal\n* `lint-to-the-future-stylelint`\n  * [#15](https://github.com/mansona/lint-to-the-future-stylelint/pull/15) add an end-to-end test ([@mansona](https://github.com/mansona))\n  * [#14](https://github.com/mansona/lint-to-the-future-stylelint/pull/14) convert to vitest ([@mansona](https://github.com/mansona))\n  * [#12](https://github.com/mansona/lint-to-the-future-stylelint/pull/12) start using release-plan ([@mansona](https://github.com/mansona))\n  * [#11](https://github.com/mansona/lint-to-the-future-stylelint/pull/11) switch to pnpm ([@mansona](https://github.com/mansona))\n\n#### Committers: 3\n- Chris Manson ([@mansona](https://github.com/mansona))\n- Peter Wagenet ([@wagenet](https://github.com/wagenet))\n- [@NullVoxPopuli](https://github.com/NullVoxPopuli)\n"
+}
