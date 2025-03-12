@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      esm:
-        specifier: ^3.2.25
-        version: 3.2.25
       import-cwd:
         specifier: ^3.0.0
         version: 3.0.0
@@ -1286,10 +1283,6 @@ packages:
     engines: {node: ^6.14.0 || ^8.10.0 || >=9.10.0}
     deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
-
-  esm@3.2.25:
-    resolution: {integrity: sha512-U1suiZ2oDVWv4zPO56S0NcR5QriEahGtdN2OR6FiOG4WJvcjBVFB0qI4+eKoWFH483PKGuLuu6V8Z4T5g63UVA==}
-    engines: {node: '>=6'}
 
   espree@5.0.1:
     resolution: {integrity: sha512-qWAZcWh4XE/RwzLJejfcofscgMc9CamR6Tn1+XRXNzrvUSSbiAjGOI/fggztjIi7y9VLPqnICMIPiGyr8JaZ0A==}
@@ -4709,8 +4702,6 @@ snapshots:
       text-table: 0.2.0
     transitivePeerDependencies:
       - supports-color
-
-  esm@3.2.25: {}
 
   espree@5.0.1:
     dependencies:

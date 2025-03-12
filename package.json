@@ -6,8 +6,9 @@
     "lint": "eslint .",
     "test": "vitest"
   },
+  "main": "main.mjs",
+  "type": "module",
   "dependencies": {
-    "esm": "^3.2.25",
     "import-cwd": "^3.0.0",
     "walk-sync": "^2.2.0"
   },
