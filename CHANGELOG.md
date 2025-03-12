@@ -1,3 +1,5 @@
+# Changelog
+
 1.1.0 / 2023-05-05
 ==================
 * Add support for stylelint@15 #7 from @mansona

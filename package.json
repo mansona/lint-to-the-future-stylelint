@@ -4,7 +4,6 @@
   "repository": "https://github.com/mansona/lint-to-the-future-stylelint",
   "scripts": {
     "lint": "eslint .",
-    "release": "release-it",
     "test": "mocha --recursive --reporter spec test/**/*.mjs"
   },
   "dependencies": {
@@ -19,7 +18,7 @@
     "eslint-plugin-import": "^2.8.0",
     "fixturify": "^2.1.1",
     "mocha": "^10.0.0",
-    "release-it": "^14.4.1",
+    "release-plan": "^0.13.1",
     "stylelint": "^14.0.0",
     "stylelint-config-standard-scss": "^5.0.0",
     "tmp": "^0.2.1"
@@ -27,8 +26,8 @@
   "peerDependencies": {
     "stylelint": "^13.0.0 || ^14.0.0 || >= 15.0.0"
   },
+  "packageManager": "pnpm@10.6.1+sha512.40ee09af407fa9fbb5fbfb8e1cb40fbb74c0af0c3e10e9224d7b53c7658528615b2c92450e74cfad91e3a2dcafe3ce4050d80bda71d757756d2ce2b66213e9a3",
   "engines": {
     "node": "12.* || >= 14.*"
-  },
-  "packageManager": "pnpm@10.6.1+sha512.40ee09af407fa9fbb5fbfb8e1cb40fbb74c0af0c3e10e9224d7b53c7658528615b2c92450e74cfad91e3a2dcafe3ce4050d80bda71d757756d2ce2b66213e9a3"
+  }
 }
