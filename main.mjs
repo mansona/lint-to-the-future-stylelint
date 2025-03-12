@@ -23,11 +23,6 @@ function ignoreError(errors, filePath) {
 
   let uniqueIds = [...new Set(ruleIds)];
 
-  if (!uniqueIds.length) {
-    // no errors to ignore
-    return;
-  }
-
   const file = readFileSync(filePath, 'utf8');
 
   const firstLine = file.split('\n')[0];
@@ -39,9 +34,12 @@ function ignoreError(errors, filePath) {
       .filter(item => item.length);
 
     uniqueIds = [...new Set([...ruleIds, ...existing])];
+    uniqueIds.sort((a, b) => a.localeCompare(b));
 
-    writeFileSync(filePath, file.replace(/^.*\n/, `/* stylelint-disable ${uniqueIds.join(', ')} */\n`));
-  } else {
+    const replacement = uniqueIds.length ? `/* stylelint-disable ${uniqueIds.join(', ')} */\n` : '';
+    writeFileSync(filePath, file.replace(/^.*\n/, replacement));
+  } else if (uniqueIds.length) {
+    uniqueIds.sort((a, b) => a.localeCompare(b));
     writeFileSync(filePath, `/* stylelint-disable ${uniqueIds.join(', ')} */\n${file}`);
   }
 }
