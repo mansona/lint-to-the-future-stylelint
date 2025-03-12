@@ -1,4 +1,4 @@
-import { expect } from 'chai';
+import { describe, it, expect } from 'vitest';
 import { list } from '../main.mjs';
 
 describe('list function', function () {
