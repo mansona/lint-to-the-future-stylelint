@@ -1,5 +1,16 @@
 # Changelog
 
+## Release (2025-03-13)
+
+lint-to-the-future-stylelint 2.1.0 (minor)
+
+#### :rocket: Enhancement
+* `lint-to-the-future-stylelint`
+  * [#17](https://github.com/mansona/lint-to-the-future-stylelint/pull/17) Switch to globby for better ignoring ([@wagenet](https://github.com/wagenet))
+
+#### Committers: 1
+- Peter Wagenet ([@wagenet](https://github.com/wagenet))
+
 ## Release (2025-03-12)
 
 lint-to-the-future-stylelint 2.0.0 (major)
