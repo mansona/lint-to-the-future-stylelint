@@ -1,20 +1,24 @@
 import { readFileSync, writeFileSync } from 'fs';
 import importCwd from 'import-cwd';
-import walkSync from 'walk-sync';
 import { join } from 'path';
-
-const fileGlobs = [
-  'app/**/*.css',
-  'addon/**/*.css',
-  'tests/**/*.css',
-  'vendor/**/*.css',
-  'app/**/*.scss',
-  'addon/**/*.scss',
-  'tests/**/*.scss',
-  'vendor/**/*.scss',
-];
+import { globbySync } from 'globby';
 
 const stylelintRegex = /stylelint-disable (.*) \*\//;
+
+function getFiles(cwd) {
+  const globs = ['**/*.css', '**/*.scss',
+
+  // globby's ignore functionality works by getting all glob matches and _then_ filtering them.
+  // We always ignore node_modules here since we'll never want it and it can be a huge performance hit
+  // to include it.
+    '!**/node_modules'
+  ];
+
+  return globbySync(globs, {
+    cwd,
+    ignoreFiles: ['**/.gitignore', '**/.stylelintignore'],
+  });
+}
 
 function ignoreError(errors, filePath) {
   const ruleIds = errors
@@ -51,11 +55,13 @@ export async function ignoreAll(directory) {
 
   const stylelint = importCwd('stylelint');
 
+  const files = getFiles(cwd);
+
   const result = await stylelint.lint({
     globbyOptions: {
       cwd,
     },
-    files: fileGlobs,
+    files,
     cwd,
   });
 
@@ -74,9 +80,7 @@ export function list(directory) {
   // directory
   const cwd = directory || process.cwd();
 
-  const files = walkSync(cwd, {
-    globs: fileGlobs,
-  });
+  const files = getFiles(cwd);
 
   const output = {};
 
