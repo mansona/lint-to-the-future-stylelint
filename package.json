@@ -9,8 +9,8 @@
   "main": "main.mjs",
   "type": "module",
   "dependencies": {
-    "import-cwd": "^3.0.0",
-    "walk-sync": "^2.2.0"
+    "globby": "^14.1.0",
+    "import-cwd": "^3.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.22.0",
